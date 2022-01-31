@@ -32,3 +32,17 @@ usuarios_machine_learning = {13, 23, 56, 42}
 # Aplicar a operação or (|) sobre dois conjuntos devolve a união de ambos:
 usuarios_finais = usuarios_data_science | usuarios_machine_learning
 print(usuarios_finais)
+
+# Já a intersecção de 2 conjuntos pode ser obtida através do operador and (&)
+usuarios_dois_cursos = usuarios_data_science & usuarios_machine_learning
+print(usuarios_dois_cursos)
+
+# Se for necessário saber quais elementos estão presentes em um conjunto e não estão presentes no
+# outro deve-se usar o operador de menos (-)
+usuarios_que_nao_fizeram_machine_learning = usuarios_data_science - usuarios_machine_learning
+print(usuarios_que_nao_fizeram_machine_learning)
+
+# Para saber os usuários que só fizeram data science ou só fizeram machine learning, deve-se
+# utilizar o operador ^ (ou exclusivo)
+so_ds_ou_so_ml = usuarios_data_science ^ usuarios_machine_learning
+print(so_ds_ou_so_ml)
