@@ -9,8 +9,7 @@ meu_texto = "Sergei Vasilyevich Rachmaninoff[a][b] (1 April [O.S. 20 March] 1873
 ocorrencias = defaultdict(int)
 
 for palavra in meu_texto.split():
-  numero_ocorrencias = ocorrencias[palavra]
-  ocorrencias[palavra] = numero_ocorrencias + 1
+  ocorrencias[palavra] += 1 # Reduzindo o código da versão anterior
 
 for palavra, numero_ocorrencias in ocorrencias.items():
     print(f'A palavra {palavra} ocorre {numero_ocorrencias} no texto')
